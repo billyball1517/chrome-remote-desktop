@@ -30,10 +30,18 @@ So in our example we would run:
 
 `docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=9001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
-3. docker exec -it crd_session /bin/bash
+Unfortunatly, google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to wrap things up.
 
-4. within the container, switch to the created user with "su - user"
+`docker exec -it crd_session /bin/bash`
 
-5. Set up remote desktop from https://remotedesktop.google.com/headless (Make sure the long command is executed as "user" not "root")
+within the container, switch to the "dummy" user
 
-6. Exit container
+`su - user`
+
+Set up remote desktop from https://remotedesktop.google.com/headless (Make sure the long command is executed as "user" not "root")
+
+Exit container
+
+`Ctl+D, Ctl+D`
+
+If anyone has a better idea of how to script the headless setup part, please let me know. :)
