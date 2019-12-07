@@ -18,7 +18,7 @@ grep "localuser" /etc/passwd
 
 And you would get an output similar to:
 
-"localuser:x:9001:9001::/home/localuser:/bin/bash"
+localuser\:x:9001:9001::/home/localuser:/bin/bash
 
 From this we know that the UID is "9001", and the /home folder is "/home/localuser"
 
