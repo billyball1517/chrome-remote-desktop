@@ -23,6 +23,10 @@ And you would get an output similar to:
 From this we know that the UID is "9001", and the /home folder is "/home/localuser"
 
 2. docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=<localuseruid> -v /home/<localuser>:/home/user billyball1517/chrome-remote-desktop
+ 
+So in our example we would run:
+
+`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=9001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
 3. docker exec -it crd_session /bin/bash
 
