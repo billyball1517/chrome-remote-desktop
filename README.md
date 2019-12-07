@@ -12,9 +12,9 @@ Perfect? No. Better than frigging around with port forwarding/tunnelling VNC ove
 
 # Steps
 
-1. You need to know the UID and /home folder for the local user first. For example if we wanted to find this out for user "localuser", we would execute:
+You need to know the UID and /home folder for the local user first. For example if we wanted to find this out for user "localuser", we would execute:
 
-grep "localuser" /etc/passwd
+`grep "localuser" /etc/passwd`
 
 And you would get an output similar to:
 
@@ -22,7 +22,9 @@ And you would get an output similar to:
 
 From this we know that the UID is "9001", and the /home folder is "/home/localuser"
 
-2. docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=<localuseruid> -v /home/<localuser>:/home/user billyball1517/chrome-remote-desktop
+My reccomended command to start the container is :
+
+`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=<localuseruid> -v /home/<localuser>:/home/user billyball1517/chrome-remote-desktop`
  
 So in our example we would run:
 
