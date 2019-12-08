@@ -18,9 +18,9 @@ You need to know the UID and /home folder for the local user first. For example,
 
 And you would get an output similar to:
 
-`localuser:x:9001:9001::/home/localuser:/bin/bash`
+`localuser:x:1001:1001::/home/localuser:/bin/bash`
 
-From this we know that the UID is "9001", and the /home folder is "/home/localuser"
+From this we know that the UID is "1001", and the /home folder is "/home/localuser"
 
 My recommended command to start the container is :
 
@@ -28,7 +28,7 @@ My recommended command to start the container is :
  
 So in our example we would run:
 
-`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=9001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
+`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
 Unfortunately, google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
 
