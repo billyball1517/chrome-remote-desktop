@@ -11,5 +11,6 @@ useradd -m -s /bin/bash -u $USER_ID -o -G chrome-remote-desktop user
 echo "#!/bin/bash" > /home/user/.chrome-remote-desktop-session
 echo "/usr/bin/startlxde" >> /home/user/.chrome-remote-desktop-session
 
-exec /usr/sbin/gosu root "$@"
+service chrome-remote-desktop start
 
+exec /usr/sbin/gosu user "$@"
