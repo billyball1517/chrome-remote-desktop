@@ -1,10 +1,11 @@
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV GDK_BACKEND=x11
 
 RUN apt update \
     && apt full-upgrade -y \
-    && apt install -y sudo lxde-core wget gosu \
+    && apt install -y sudo wget gosu \
     && wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb \
     && apt install -y ./chrome-remote-desktop_current_amd64.deb \
     && rm -f ./chrome-remote-desktop_current_amd64.deb \
