@@ -28,7 +28,7 @@ So in our example we would run:
 
 `docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
-Unfortunately, google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
+Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
 
 `docker exec -it crd_session /bin/bash`
 
