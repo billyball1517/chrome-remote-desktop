@@ -4,7 +4,7 @@
  
 The container uses the uses the lxde desktop, creates a dummy "user" account, and mounts the dummy user /home folder to the specified local user /home folder.
 
-To run GUI apps through Chrome Remote Desktop, I recommend to use X11 forwarding once you are in the remote session. Simply execute "ssh -Y localuser@172.17.0.1" (replacing localuser with your specified user) to accomplish this. Obviously ssh needs to be running (with X11 forwarding enabled) on the host to accomplish this.
+To run GUI apps through Chrome Remote Desktop, I recommend to use X11 forwarding once you are in the remote session. Simply execute `ssh -Y localuser@172.17.0.1` (replacing localuser with your specified user) to accomplish this. Obviously ssh needs to be running (with X11 forwarding enabled) on the host to accomplish this.
 
 Perfect? No. Better than frigging around with port forwarding/tunnelling VNC over ssh? Yes.
 
