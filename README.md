@@ -1,8 +1,6 @@
 # billyball1517/chrome-remote-desktop
 
 # Introduction
-
-I created this to use "Chrome Remote Desktop" on .rpm based distros (RHEL, CentOS, Fedora, Suse, etc.)
  
 The container uses the uses the lxde desktop, creates a dummy "user" account, and mounts the dummy user /home folder to the specified local user /home folder.
 
