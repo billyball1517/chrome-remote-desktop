@@ -32,11 +32,7 @@ Unfortunately, google makes it difficult to integrate Chrome Remote Desktop into
 
 `docker exec -it crd_session /bin/bash`
 
-within the container, switch to the "dummy" user
-
-`su - user`
-
-Set up remote desktop with the instructions from https://remotedesktop.google.com/headless. You don't have to install anything, just skip through to the part where it gives you a code. Then copy and paste the code into the container terminal. (Make sure the long command is executed as "user" not "root")
+Set up remote desktop with the instructions from https://remotedesktop.google.com/headless. You don't have to install anything, just skip through to the part where it gives you a code. Then copy and paste the code into the container terminal.
 
 Exit container
 
