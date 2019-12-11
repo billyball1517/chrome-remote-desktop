@@ -2,11 +2,11 @@
 
 # Introduction
  
-The container uses the uses the lxde desktop, creates a dummy "user" account, and mounts the dummy user /home folder to the specified local user /home folder.
+The container creates a dummy "user" account, and mounts the dummy user /home folder to the specified local user /home folder.
 
-To run GUI apps through Chrome Remote Desktop, I recommend to use X11 forwarding once you are in the remote session. Simply execute `ssh -Y localuser@172.17.0.1` (replacing localuser with your specified user) to accomplish this. Obviously ssh needs to be running (with X11 forwarding enabled) on the host to accomplish this.
+The first part is configuring the container with correct permissions, the second part is setting up desktop forwarding.
 
-Perfect? No. Better than frigging around with port forwarding/tunnelling VNC over ssh? Yes.
+*NOTE: For this to work, the host must support ssh with X11 forwarding. Also, GNOME Desktop will not work.*
 
 # Steps
 
@@ -27,6 +27,8 @@ My recommended command to start the container is :
 So in our example we would run:
 
 `docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
+
+
 
 Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
 
