@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV GDK_BACKEND=x11
 
 RUN apt update \
     && apt full-upgrade -y \
