@@ -36,7 +36,7 @@ So in our example we would run (remembering to swap out the appropriate values):
 PART 2
 \======
 
-Now is the time to note that GNOME dosn't support X11 forwarding, therefore if you use GNOME (or a derivitive like Pantheon or Cinnamon), you will need to install an additional desktop environment. LXDE is a good lightweight option.
+Now is the time to note that GNOME (and GNOME apps like `gnome-terminal`, `gnome-software`, etc.) dosn't support X11 forwarding, therefore if you use GNOME (or a derivitive like Pantheon or Cinnamon), you will need to install an additional desktop environment. LXDE is a good lightweight option.
 
 `yum install -y lxde-common`
 
