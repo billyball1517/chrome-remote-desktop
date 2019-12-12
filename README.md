@@ -10,6 +10,10 @@ The first part is configuring the container with correct permissions, the second
 
 # Steps
 
+======
+PART 1
+======
+
 You need to know the UID and /home folder for the local user first. For example, if we wanted to find this out for user "localuser", we would execute:
 
 `grep "localuser" /etc/passwd`
@@ -28,6 +32,9 @@ So in our example we would run:
 
 `docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
+======
+PART 2
+======
 
 
 Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
