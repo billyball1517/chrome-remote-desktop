@@ -34,7 +34,7 @@ So in our example we would run:
 
 ======
 PART 2
-======
+\======
 
 
 Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
