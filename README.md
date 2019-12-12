@@ -48,9 +48,10 @@ For example, LXDE has a file named `LXDE.desktop` with the following command: `E
 Create the session configuration file for the local user at `~/.chrome-remote-desktop-session`
 
 In our case (using LXDE) the file will look like this:
-`#!/bin/bash
 
-exec ssh -tY localuser@172.17.0.1 /usr/bin/startlxde`
+`#!/bin/bash`
+
+`exec ssh -tY localuser@172.17.0.1 /usr/bin/startlxde`
 
 Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
 
