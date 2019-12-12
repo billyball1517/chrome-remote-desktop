@@ -82,3 +82,9 @@ Exit container
 Congratulations, you now have a remote desktop connection that will persist across reboots!
 
 If anyone has a better idea of how to script the headless setup part, please let me know. :)
+
+# Additional Info
+
+Sometimes GNOME dosn't play well with other Desktop Environments. If you're using GNOME locally, and a different DE for your remote connection. Try logging into the secondary DE locally first to see if it works.
+
+If in doubt, have you tried turning it off and on again.
