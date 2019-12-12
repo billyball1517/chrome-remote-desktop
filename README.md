@@ -53,7 +53,7 @@ In our example (using LXDE and localuser) the file will look like this:
 
 `exec ssh -tY localuser@172.17.0.1 /usr/bin/startlxde`
 
-For context, this command is telling the container where to get the desktop from. In the default docker coniguration, 172.17.0.1 will always be the host machine.
+For context, this command is telling the container where to get the desktop from. In the default docker configuration, 172.17.0.1 will always be the host machine.
 
 Finally, we need to do some one-time configuration within the container. Unfortunatly these steps can't be included in the build file.
 
