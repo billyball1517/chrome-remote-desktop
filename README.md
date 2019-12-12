@@ -12,7 +12,7 @@ The first part is configuring the container with correct permissions, the second
 
 ======
 PART 1
-======
+\======
 
 You need to know the UID and /home folder for the local user first. For example, if we wanted to find this out for user "localuser", we would execute:
 
