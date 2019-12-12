@@ -36,7 +36,7 @@ So in our example we would run (remembering to swap out the appropriate values):
 PART 2
 \======
 
-Now is the time to note that GNOME (and GNOME apps like `gnome-terminal`, `gnome-software`, etc.) dosn't support X11 forwarding, therefore if you use GNOME (or a derivitive like Pantheon or Cinnamon), you will need to install an additional desktop environment. LXDE is a good lightweight option.
+Now is the time to note that GNOME (and GNOME apps like `gnome-terminal`, `gnome-software`, etc.) does not support X11 forwarding, therefore if you use GNOME (or a derivative like Pantheon or Cinnamon), you will need to install an additional desktop environment. LXDE is a good lightweight option.
 
 `yum install -y lxde-common`
 
@@ -63,7 +63,7 @@ Then switch the the "dummy" user.
 
 `su - user`
 
-We need to generate and propogagate ssh keys so the conatiner can make a connection without authenticating every time. Just accept the defaults, and don't require a passphrase.
+We need to generate and propagate ssh keys so the container can make a connection without authenticating every time. Just accept the defaults, and don't require a passphrase.
 
 `ssh-keygen`
 
@@ -73,7 +73,7 @@ Answer yes to the fingerprint question, and enter the password for your local us
 
 Now, set up remote desktop with the instructions from https://remotedesktop.google.com/headless. You don't have to install anything, just skip through to the part where it gives you a code. Then copy and paste the code into the container terminal.
 
-At this point it should spit out some text and say `Host ready to receive connections`. If it dosen't, you probably missed a step. To double check go to https://remotedesktop.google.com/access and see if you can access your desktop.
+At this point it should spit out some text and say `Host ready to receive connections`. If it doesn't, you probably missed a step. To double check go to https://remotedesktop.google.com/access and see if you can access your desktop.
 
 Exit container
 
