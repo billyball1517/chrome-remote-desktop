@@ -66,6 +66,7 @@ Then switch the the "dummy" user.
 We need to generate and propogagate ssh keys so the conatiner can make a connection without authenticating every time. Just accept the defaults, and don't require a passphrase.
 
 `ssh-keygen`
+
 `ssh-copy-id localuser@172.17.0.1`
 
 Answer yes to the fingerprint question, and enter the password for your local user.
