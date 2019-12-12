@@ -6,7 +6,7 @@ The container creates a dummy "user" account, and mounts the dummy user /home fo
 
 The first part is configuring the container with correct permissions, the second part is setting up desktop forwarding.
 
-*NOTE: For this to work, the host must support ssh with X11 forwarding. Also, GNOME Desktop will not work.*
+*NOTE: For this to work, the host must support ssh with X11 forwarding. Google it if you don't know what that means.*
 
 # Steps
 
@@ -36,6 +36,20 @@ So in our example we would run:
 PART 2
 \======
 
+Now is the time to note that GNOME dosn't support X11 forwarding, therefore if you use GNOME, you will need to install an additional desktop environment. LXDE is a good lightweight option.
+
+`yum install -y lxde-common`
+
+https://support.google.com/chrome/answer/1649523?co=GENIE.Platform%3DDesktop&hl=en
+
+Look in /usr/share/xsessions/ for the .desktop file for your preferred desktop environment.
+For example, LXDE has a file named `LXDE.desktop` with the following command: `Exec=/usr/bin/startlxde`
+
+Create the session configuration file for the local user at `~/.chrome-remote-desktop-session`
+
+In our case (using LXDE) the file will look like this:
+`#!/bin/bash
+exec ssh -tY localuser@172.17.0.1 /usr/bin/startlxde`
 
 Unfortunately, Google makes it difficult to integrate Chrome Remote Desktop into scripts, so we need to enter a shell in the container to configure the session.
 
