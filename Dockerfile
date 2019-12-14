@@ -9,13 +9,7 @@ RUN apt update \
     && apt install -y ./chrome-remote-desktop_current_amd64.deb \
     && rm -f ./chrome-remote-desktop_current_amd64.deb \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && useradd -m -s /bin/bash -G chrome-remote-desktop user
 
-COPY chrome-remote-desktop.sh /chrome-remote-desktop.sh
-RUN chmod +x /chrome-remote-desktop.sh
-
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-CMD /chrome-remote-desktop.sh
+CMD service chrome-remote-desktop start
