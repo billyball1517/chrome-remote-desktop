@@ -11,8 +11,11 @@ RUN apt update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+COPY chrome-remote-desktop.sh /chrome-remote-desktop.sh
+RUN chmod +x /chrome-remote-desktop.sh
+
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-CMD while true; do service chrome-remote-desktop start; sleep 10; done
+CMD /chrome-remote-desktop.sh
