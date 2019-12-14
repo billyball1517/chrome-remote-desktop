@@ -15,4 +15,4 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-CMD while true; do service chrome-remote-desktop start; sleep 1; done
+CMD while true; do service chrome-remote-desktop start; sleep 10; done
