@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV USER_ID=${LOCAL_USER_ID:-9001}
 
 RUN apt update \
     && apt full-upgrade -y \
@@ -12,4 +13,6 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash -G chrome-remote-desktop user
 
-CMD /usr/sbin/service chrome-remote-desktop start && /usr/bin/tail -f /dev/null
+CMD /usr/sbin/usermod -u $LOCAL_USER_ID -o user \
+    && /usr/sbin/service chrome-remote-desktop start \
+    && /usr/bin/tail -f /dev/null
