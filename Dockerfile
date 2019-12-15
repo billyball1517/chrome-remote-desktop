@@ -12,4 +12,4 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash -G chrome-remote-desktop user
 
-CMD service chrome-remote-desktop start
+CMD /usr/sbin/service chrome-remote-desktop start && /usr/bin/tail -f /dev/null
