@@ -13,5 +13,9 @@ RUN apt update \
     && rm -rf /var/lib/apt/lists/* \
     && useradd -m -s /bin/bash -G chrome-remote-desktop user
 
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+
 CMD /usr/sbin/service chrome-remote-desktop start \
     && /usr/bin/tail -f /dev/null
