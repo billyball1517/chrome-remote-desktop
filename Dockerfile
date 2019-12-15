@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV USER_ID=${LOCAL_USER_ID:-9001}
 
 RUN apt update \
     && apt full-upgrade -y \
