@@ -26,11 +26,11 @@ From this we know that the UID is "1001", and the /home folder is "/home/localus
 
 My recommended command to start the container is :
 
-`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=<localuseruid> -v /home/<localuser>:/home/user billyball1517/chrome-remote-desktop`
+`docker run -d --name=chrome-remote-desktop --restart=always -e LOCAL_USER_ID=<localuseruid> -v /home/<localuser>:/home/user billyball1517/chrome-remote-desktop`
  
 So in our example we would run (remembering to swap out the appropriate values):
 
-`docker run -d --name=crd_session --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
+`docker run -d --name=chrome-remote-desktop --restart=always -e LOCAL_USER_ID=1001 -v /home/localuser:/home/user billyball1517/chrome-remote-desktop`
 
 ======
 PART 2
