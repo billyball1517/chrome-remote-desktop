@@ -10,9 +10,6 @@ echo "Creating user with UID : $USER_ID"
 useradd -m -s /bin/bash -u $USER_ID -o -G chrome-remote-desktop user
 export HOME=/home/user
 
-/sbin/init
-
-systemctl enable chrome-remote-desktop
 service chrome-remote-desktop start
 
 exec /usr/sbin/gosu user "$@"
